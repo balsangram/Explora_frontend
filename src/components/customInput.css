@@ -1,0 +1,9 @@
+.custom-input{
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    outline: none;
+    /* border: none; */
+    border: 1px solid #d3d3d2;
+    margin: .4rem .2rem ;
+    width: 87%;
+}

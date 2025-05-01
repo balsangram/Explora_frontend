@@ -1,0 +1,55 @@
+/* sidebar.css */
+.sidebar {
+    width: 13rem;
+    transition: all 0.3s ease;
+    background-color: #272626;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    z-index: 99;
+    position: fixed;
+  }
+  .sidebar h2{
+    margin-bottom: 3rem;
+  }
+  
+  /* .sidebar.hidden {
+    width: 3rem;
+    padding: 0;
+    overflow: hidden;
+  } */
+  
+  .sidebar .sidebar-list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 3rem;
+  }
+  
+  .sidebar .sidebar-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px ;
+    width: 12rem;
+  }
+  
+  .sidebar .sidebar-list li:hover {
+    background-color: #555;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .sidebar p {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+  }
+
+  .more-buttom{
+    position: absolute;
+    bottom: 5rem;
+  }
+  

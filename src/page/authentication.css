@@ -1,0 +1,13 @@
+form{
+    width: 100%;
+    /* background: green; */
+}
+
+.authentication{
+    /* background: red; */
+width: 25rem;
+}
+
+.USerTypeChangeBTN{
+    display: flex;
+}
