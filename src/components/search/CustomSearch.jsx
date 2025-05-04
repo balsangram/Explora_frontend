@@ -1,7 +1,8 @@
 import React from "react";
+import "./customSearch.css";
 
 function CustomSearch() {
-  return <div>CustomSearch</div>;
+  return <div className="custom_search">CustomSearch</div>;
 }
 
 export default CustomSearch;

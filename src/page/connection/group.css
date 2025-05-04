@@ -1,4 +1,19 @@
 .group {
+    width: 75%;
     height: 100vh;
-    /* background-color: aqua; */
+    background-color: rgb(164, 221, 221);
+    position: absolute;
+    right: 0;
+}
+.send_message{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+}
+.group_input{
+    padding: .6rem;
+}
+.input_full{
+    width: 87%;
 }

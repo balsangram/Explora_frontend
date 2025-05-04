@@ -1,19 +1,19 @@
 // src/components/routeProtect/ProtectedRoute.jsx
 import { Navigate, Outlet } from "react-router-dom";
-import { useSelector } from "react-redux"; // ✅
+import { useSelector } from "react-redux";
 
 const ProtectedRoute = () => {
-  const loggedIn = useSelector((state) => state.user.loggedIn); // ✅ from redux
+  const loggedIn = useSelector((state) => state.user.loggedIn);
 
-  const userFormStorage = JSON.parse(localStorage.getItem("user"));
+  const userFromStorage = JSON.parse(localStorage.getItem("user"));
 
   const isAuthenticated =
-    loggedIn || (userFormStorage && userFormStorage.loggedIn);
+    loggedIn || (userFromStorage && userFromStorage.loggedIn);
 
   return isAuthenticated ? (
-    <Outlet /> // Render protected children
+    <Outlet /> // If authenticated, allow access
   ) : (
-    <Navigate to="auth/aboutenticate" replace /> // Redirect if not logged in
+    <Navigate to="/auth/authenticate" replace /> // ❗ fixed path
   );
 };
 

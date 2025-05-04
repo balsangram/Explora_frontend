@@ -1,9 +1,23 @@
-.custom-select{
-    padding: .5rem 1.5rem;
-    border-radius: .5rem;
+.custom-select {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
     outline: none;
-    /* border: none; */
-    border: 1px solid #d3d3d2;
-    margin: .4rem .2rem ;
-    width: 100%;
-}
+    border: 1px solid #ccc;
+    margin: 0.4rem 0.2rem;
+    width: 17rem;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .custom-select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  }
+  
+  .custom-select:hover {
+    border-color: #999;
+    cursor: pointer;
+  }
+  

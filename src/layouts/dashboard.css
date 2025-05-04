@@ -1,23 +1,30 @@
+/* dashboard.css */
+
 .dashboard {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
 .dashboard-main {
   display: flex;
-  flex: 1;
-  background-color: #f5f5f5;
+  width: 100%;
 }
 
 .sidebar {
-  width: 220px;
-  background-color: #2c3e50;
+  width: 15vw;
+  min-width: 13rem;
+  position: fixed;
+  height: 100vh;
+  background-color: #201e1e;
   color: white;
-  padding: 20px;
+  z-index: 99;
 }
 
 .dashboard-content {
-  flex: 1;
+  margin-left: 15vw; /* must match sidebar width */
+  width: calc(100% - 15vw);
   padding: 20px;
+  background-color: #af0606;
+  height: 100vh;
+  overflow-y: auto;
 }

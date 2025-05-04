@@ -1,0 +1,7 @@
+.map_box{
+    width: 75%;
+    height: 100vh;
+    background-color: rgb(233, 226, 83);
+    position: absolute;
+    right: 0;
+}

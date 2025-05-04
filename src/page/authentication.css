@@ -4,8 +4,14 @@ form{
 }
 
 .authentication{
-    /* background: red; */
-width: 25rem;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .USerTypeChangeBTN{

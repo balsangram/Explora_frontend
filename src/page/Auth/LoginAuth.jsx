@@ -7,6 +7,7 @@ import "../authentication.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/userSlice";
+import "./login.css";
 
 function LoginAuth({ setExist }) {
   const navigate = useNavigate();
@@ -75,43 +76,50 @@ function LoginAuth({ setExist }) {
     function loginSuccess(input) {
       localStorage.setItem("token", "dummy-token");
       dispatch(login(input));
-      navigate("/user/global/social");
+      navigate("/");
     }
   };
 
   return (
-    <div className="authentication">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit(onSubmit, onError)}>
-        <CustomSelect {...register("role")} name="role">
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-          <option value="guide">Guide</option>
-        </CustomSelect>
+    <div className="">
+      <div className="login">
+        <h1>Explorer</h1>
+        <form onSubmit={handleSubmit(onSubmit, onError)}>
+          <CustomSelect {...register("role")} name="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+            <option value="guide">Guide</option>
+          </CustomSelect>
 
-        <CustomInput
-          type="text"
-          name="name"
-          placeholder="Enter your email or username"
-          {...register("name", { required: "This field is required" })}
-        />
-        {errors.name && <span>{errors.name.message}</span>}
+          <CustomInput
+            type="text"
+            name="name"
+            placeholder="Enter your email or username"
+            {...register("name", { required: "This field is required" })}
+          />
+          {errors.name && <span>{errors.name.message}</span>}
 
-        <CustomInput
-          type="password"
-          name="password"
-          placeholder="Enter your password"
-          {...register("password", { required: "This field is required" })}
-        />
-        {errors.password && <span>{errors.password.message}</span>}
+          <CustomInput
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            {...register("password", { required: "This field is required" })}
+          />
+          {errors.password && <span>{errors.password.message}</span>}
 
-        <CustomButton type="submit">Login</CustomButton>
-      </form>
+          <CustomButton type="submit">Login</CustomButton>
+        </form>
 
-      <p>
-        Don’t have an account?{" "}
-        <span onClick={() => setExist(false)}>Register</span>
-      </p>
+        <p onClick={() => navigate("/auth/forgot_password")}>
+          Forgotten your password?
+        </p>
+      </div>
+      <div className="login">
+        <p>
+          Don’t have an account?{" "}
+          <span onClick={() => setExist(false)}>Register</span>
+        </p>
+      </div>
     </div>
   );
 }

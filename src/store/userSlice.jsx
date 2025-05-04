@@ -20,8 +20,12 @@ const userSlice = createSlice({
       state.loggedIn = false;
       localStorage.removeItem("user");
     },
+    setLoggedInUser(state, action) {
+      state.name = action.payload.name;
+      state.loggedIn = action.payload.loggedIn;
+    },
   },
 });
 
-export const { login, logout } = userSlice.actions;
+export const { login, logout, setLoggedInUser } = userSlice.actions;
 export default userSlice.reducer;

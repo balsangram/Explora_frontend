@@ -1,0 +1,36 @@
+.custom_friend{
+/* background-color: aquamarine; */
+display: flex;
+padding: 1rem;
+/* border-radius: 16px; */
+height: 2rem;
+gap: 1rem;
+/* margin: 1rem; */
+align-items: center;
+}
+.custom_friend:hover{
+    background-color: gray;
+}
+
+.friend_profile{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.friend_name{
+    margin-bottom: 2px;
+}
+
+.message_time{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    /* width: 100%; */
+    align-items: end;
+    gap: 5px;
+}
+.friend_time{
+font-size: 10px;
+padding: 2px;
+}

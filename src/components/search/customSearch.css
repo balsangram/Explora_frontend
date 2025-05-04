@@ -1,0 +1,10 @@
+.custom_search{
+    /* background-color: aquamarine; */
+display: flex;
+padding: 1rem;
+/* border-radius: 16px; */
+height: 2rem;
+gap: 1rem;
+/* margin: 1rem; */
+align-items: center;
+}

@@ -1,0 +1,7 @@
+.friend_message{
+    background-color: rgb(226, 194, 194);
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0 10px 10px  10px ;
+}

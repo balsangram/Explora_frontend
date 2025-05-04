@@ -1,5 +1,5 @@
 import { Heart, MessageCircle, Save, Share2 } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import "./customerCard.css";
 
 function CustomCard({
@@ -11,6 +11,18 @@ function CustomCard({
   view,
   description,
 }) {
+  const [comment, setComment] = useState("");
+
+  function handleCommentChange(e) {
+    setComment(e.target.value);
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === "Enter" && comment.trim() !== "") {
+      console.log("Comment send:", comment);
+      setComment("");
+    }
+  }
   return (
     <div className="card_border">
       <div className="card_heading">
@@ -32,7 +44,14 @@ function CustomCard({
       </div>
       <p className="card_view">{view} views</p>
       <p className="card_description">{description}</p>
-      <input type="text" />
+      <input
+        className="card_comment"
+        type="text"
+        placeholder="Write a comment..."
+        value={comment}
+        onChange={handleCommentChange}
+        onKeyDown={handleKeyDown}
+      />
     </div>
   );
 }

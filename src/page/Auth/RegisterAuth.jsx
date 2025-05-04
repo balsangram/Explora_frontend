@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CustomButton from "../../components/button/CustomButton";
 import CustomInput from "../../components/CustomInput";
 import { useForm } from "react-hook-form";
+import "./register.css";
 
 function RegisterAuth({ setExist }) {
   const { register, handleSubmit } = useForm();
@@ -18,8 +19,8 @@ function RegisterAuth({ setExist }) {
     setIsUSer(false);
   };
   return (
-    <div className="authentication">
-      <h1>Register</h1>
+    <div className="register">
+      <h1>Explorer</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="USerTypeChangeBTN">
           <CustomButton onClick={userForm}>User</CustomButton>

@@ -10,16 +10,17 @@
 .card_heading{
     display: flex;
     gap: 1rem;
-    background-color: red;
-    padding-left: 2rem;
+    /* background-color: red; */
+    /* padding-left: 2rem; */
+    margin: 0;
     align-items: center;
 }
 .card_title{
-background-color: aqua;
+/* background-color: aqua; */
 margin: 0;
 }
 .card_body{
-background-color: pink;
+/* background-color: pink; */
 margin: 0;
 }
 .heading_img{
@@ -32,21 +33,31 @@ margin: 0;
     width: 100%;
 }
 .card_icons{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     margin: 0;
     display: flex;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     justify-content: space-between;
 }
 .card_icons .icon_left{
     display: flex;
     justify-content: space-between;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     width: 20%;
-}
-.card_description{
-    margin: 0;
 }
 .card_view{
     margin: 0;
+    padding: 4px 0;
+}
+.card_description{
+    margin: 0;
+    padding:  4px 0;
+}
+.card_comment{
+    background-color: rgba(128, 255, 0, 0);
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 6px 0 10px;
+    outline: none;
 }
